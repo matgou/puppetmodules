@@ -1,8 +1,0 @@
-# syncrepl specific indices
-dn: olcDatabase={1}hdb,cn=config
-changetype: modify
-add: olcSyncRepl
-olcSyncRepl: rid=001 provider=ldap://hygie.gorgu.net bindmethod=simple binddn="cn=synchronisator,dc=gadz,dc=org" credentials=qrh9VdJ6uMVM68Ns294S94xhtcc2Lju657SEjFa3Hw3GKV2W searchbase="dc=gadz,dc=org" logbase="cn=accesslog" logfilter="(&(objectClass=auditWriteObject)(reqResult=0))" schemachecking=on type=refreshAndPersist retry="60 +" syncdata=accesslog
--
-add: olcUpdateRef
-olcUpdateRef: ldap://hygie.gorgu.net
