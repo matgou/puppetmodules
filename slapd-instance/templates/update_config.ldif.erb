@@ -1,0 +1,9 @@
+# AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
+# CRC32 587b4961
+dn: cn=config
+changetype: modify
+replace: olcArgsFile
+olcArgsFile: /mnt/<%= @instancename %>/run/slapd.args
+-
+replace: olcPidFile
+olcPidFile: /mnt/<%= @instancename %>/run/slapd.pid

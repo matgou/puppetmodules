@@ -1,0 +1,14 @@
+# Add indexes/modify ACL to the frontend db.
+dn: olcDatabase={1}hdb,cn=config
+changetype: modify
+add: olcDbIndex
+olcDbIndex: entryCSN eq
+-
+add: olcDbIndex
+olcDbIndex: entryUUID eq
+#-
+#delete: olcAccess
+#olcAccess: {0}to attrs=userPassword,shadowLastChange by self write by anonymous auth by dn="cn=admin,dc=gadz,dc=org" write by * none
+#-
+#add: olcAccess
+#olcAccess: {0}to attrs=userPassword,shadowLastChange by anonymous auth by dn="cn=admin,dc=gadz,dc=org" write dn="cn=synchronisator,dc=gadz,dc=org" read by * none

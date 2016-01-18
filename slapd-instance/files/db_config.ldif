@@ -1,0 +1,18 @@
+# syncrepl specific indices
+dn: olcDatabase={1}hdb,cn=config
+changetype: modify
+replace: olcDbConfig
+olcDbConfig: set_cachesize 0 10485760 0
+olcDbConfig: set_lg_bsize 2097512
+olcDbConfig: set_lg_dir /var/tmp/bdb-log
+olcDbConfig: set_flags DB_LOG_AUTOREMOVE
+olcDbConfig: set_flags DB_TXN_NOSYNC
+-
+replace: olcDbCheckpoint
+olcDbCheckpoint: 1024 10
+-
+add: olcDbCachesize
+olcDbCachesize: 1000
+-
+add: olcDbIDLcacheSize
+olcDbIDLcacheSize: 3000

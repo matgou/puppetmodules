@@ -1,0 +1,5 @@
+dn: cn=config
+changetype: modify
+replace: olcLogLevel
+# handles multiple values on one line, like "olcLogLevel: stats sync"
+olcLogLevel: stats filter sync conns ACL

@@ -1,0 +1,9 @@
+ENV=<%= @instancename %>
+PORT=<%= @ldap_port %>
+
+ROOT=/mnt/$ENV
+URI="ldap://0.0.0.0:$PORT/ ldapi://%2Fmnt%2F$ENV%2Frun%2Fldapi"
+
+USER=slapd_$ENV
+GROUP=openldap
+

@@ -1,0 +1,11 @@
+# Accesslog database definitions
+dn: olcDatabase={3}hdb,cn=config
+objectClass: olcDatabaseConfig
+objectClass: olcHdbConfig
+olcDatabase: {3}hdb
+olcDbDirectory: /var/lib/ldap/accesslog
+olcSuffix: cn=accesslog
+olcRootDN: cn=admin,dc=gadz,dc=org
+olcDbIndex: default eq
+olcDbIndex: entryCSN,objectClass,reqEnd,reqResult,reqStart
+olcAccess: to * by dn="cn=synchronisator,dc=gadz,dc=org" write

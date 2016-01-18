@@ -1,0 +1,32 @@
+# AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
+# CRC32 1aff029b
+dn: olcDatabase={1}hdb
+objectClass: olcDatabaseConfig
+objectClass: olcHdbConfig
+olcDatabase: {1}hdb
+olcDbDirectory: /mnt/<%= @instancename %>/ldap-datafile/
+olcSuffix: dc=gadz,dc=org
+olcAccess: {0} to *  by dn.base="gidNumber=0+uidNumber=0,cn=peercred,cn=extern
+ al,cn=auth" read by dn.base="cn=admin,dc=gadz,dc=org" write  by * read
+olcAccess: {1}to dn.base="" by * read
+olcLastMod: TRUE
+olcRootDN: cn=admin,dc=gadz,dc=org
+olcRootPW:: ZGV2cGFzc3dk
+olcDbCheckpoint: 512 30
+olcDbConfig: {0}set_cachesize 0 2097152 0
+olcDbConfig: {1}set_lk_max_objects 1500
+olcDbConfig: {2}set_lk_max_locks 1500
+olcDbConfig: {3}set_lk_max_lockers 1500
+olcDbConfig: {4}set_flags DB_LOG_AUTOREMOVE
+olcDbIndex: objectClass eq
+olcDbIndex: default eq
+olcDbIndex: uid,idSoce eq
+olcDbIndex: emailCompte,mailAlias,hruid,hrpid,alias eq,sub
+olcDbIndex: actif eq
+structuralObjectClass: olcHdbConfig
+entryUUID: 32c12244-df06-1033-9ecc-63ca138cb9ad
+creatorsName: gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth
+createTimestamp: 20141003050220Z
+entryCSN: 20141003050220.155924Z#000000#000#000000
+modifiersName: gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth
+modifyTimestamp: 20141003050220Z
